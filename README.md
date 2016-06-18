@@ -11,4 +11,9 @@ where,
 
 * 'main' CSS Selector for element whose height is to be set on other elements
 * 'others' Array of CSS Selector of elements whose height is to be set
-* 'offset' Any variance required from the height being set to the element
+* 'offset' Any variance required from the height being set to the element [Optional]
+
+##Note
+To select current element on which directive is placed, use empty selector "".
+eg.
+> setequalheight='{"main": ".child.three", "others": [""]}'
