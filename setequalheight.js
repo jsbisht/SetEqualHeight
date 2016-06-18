@@ -18,7 +18,14 @@ directive('setequalheight', function($timeout) {
         var mainElement = element[0].querySelector(params.main);
         var mainElementHeight = mainElement.offsetHeight;
         for(var i=0; i<params.others.length; i++) {
-          var otherElement = element[0].querySelector(params.others[i]);
+          var otherElement;
+          // To select current element on which directive is placed
+          if(params.others[i]=="") {
+            otherElement= element[0];
+          }
+          else {
+            otherElement= element[0].querySelector(params.others[i]);
+          }
           if(otherElement && otherElement != null) {
             otherElement.style.height = (mainElementHeight - params.offset[i]) + 'px';
           }
