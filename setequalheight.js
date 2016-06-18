@@ -27,7 +27,8 @@ directive('setequalheight', function($timeout) {
             otherElement= element[0].querySelector(params.others[i]);
           }
           if(otherElement && otherElement != null) {
-            otherElement.style.height = (mainElementHeight - params.offset[i]) + 'px';
+            offset = params.offset && params.offset[i] ? params.offset[i] : 0;
+            otherElement.style.height = (mainElementHeight - offset) + 'px';
           }
         }
       });
