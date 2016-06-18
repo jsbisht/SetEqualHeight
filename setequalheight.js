@@ -1,4 +1,4 @@
-angular.module('homepage').
+angular.module('testpage', []).
 /**
  * @param 'main' CSS Selector for element whose height is to be set on other elements
  * @param 'others' Array of CSS Selector of elements whose height is to be set
